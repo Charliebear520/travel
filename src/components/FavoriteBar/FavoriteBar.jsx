@@ -1,7 +1,7 @@
 import { HeartFilled } from "@ant-design/icons";
 import styles from './favorite.module.css'
 
-export default function FavoriteList(){
+export default function FavoriteBar(){
     return(
         <div className={styles.navbox}>
             <HeartFilled style={{fontSize:'24px',color: 'bisque'}}/>

@@ -1,15 +1,17 @@
-import FavoriteList from "../components/FavoriteList/FavoriteList";
+import FavoriteBar from "../components/FavoriteBar/FavoriteBar";
 import Header from "../components/Header/Header";
+import PlaceBar from "../components/PlaceBar/PlaceBar";
 import PlaceList from "../components/PlaceList/PlaceList";
-import ScheduleList from "../components/ScheduleList/ScheduleList";
+import ScheduleBar from "../components/ScheduleBar/ScheduleBar";
 
 export default function Home() {
   return (
     <>
       <Header />
-      <PlaceList />
-      <FavoriteList/>
-      <ScheduleList/>
+      <PlaceBar />
+      <FavoriteBar />
+      <ScheduleBar />
+      <PlaceList/>
     </>
   );
 }

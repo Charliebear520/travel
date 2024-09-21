@@ -1,7 +1,7 @@
 import { ScheduleFilled } from "@ant-design/icons";
 import styles from './schedule.module.css'
 
-export default function ScheduleList(){
+export default function ScheduleBar(){
     return(
         <div className={styles.navbox}>
             <ScheduleFilled style={{fontSize:'24px',color: 'bisque'}}/>

@@ -1,11 +1,14 @@
-import { EnvironmentFilled } from "@ant-design/icons";
-import styles from './place.module.css'
+import PlaceItem from "../PlaceItem/PlaceItem";
 
-export default function PlaceList(){
-    return(
-        <div className={styles.navbox}>
-            <EnvironmentFilled style={{fontSize:'24px',color: 'bisque'}}/>
-            <h1 className={styles.title}>Site</h1>
-        </div>
-    )
+const PlaceObj = {
+  title: "This is Taiwan",
+  detail: "good",
+};
+
+export default function PlaceList() {
+  return (
+    <>
+      <PlaceItem PlaceObj={PlaceObj} />
+    </>
+  );
 }
