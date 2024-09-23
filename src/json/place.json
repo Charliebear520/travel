@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Osaka",
+    "image": "/japan.jpg",
+    "nation": "Japan",
+    "id": "1"
+  },
+  {
+    "name": "Rome",
+    "image": "/italy.jpg",
+    "nation": "Italy",
+    "id": "2"
+  },
+  {
+    "name": "Big ben",
+    "image": "/uk.jpg",
+    "nation": "UK",
+    "id": "3"
+  },
+  {
+    "name": "Tour Eiffel",
+    "image": "/france.jpg",
+    "nation": "France",
+    "id": "4"
+  }
+]

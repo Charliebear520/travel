@@ -1,4 +1,6 @@
 import PlaceItem from "../PlaceItem/PlaceItem";
+import places from "../../json/place.json";
+import styles from "./place.module.css";
 
 const PlaceObj = {
   title: "This is Taiwan",
@@ -8,7 +10,14 @@ const PlaceObj = {
 export default function PlaceList() {
   return (
     <>
-      <PlaceItem PlaceObj={PlaceObj} />
+      <div className={styles.containerbox}>
+        <h1 className={styles.title}>Featured destinations</h1>
+        <div className={styles.container}>
+          {places.map((place) => (
+            <PlaceItem key={place.id} place={place} />
+          ))}
+        </div>
+      </div>
     </>
   );
 }
