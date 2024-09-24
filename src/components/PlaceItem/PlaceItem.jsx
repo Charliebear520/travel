@@ -1,12 +1,15 @@
 import styles from "./place.module.css";
+import { Row, Col } from "antd";
 
 export default function PlaceItem({ place }) {
   return (
     <>
-      <div>
-        <img src={place.image} alt="" width="200px" />
-        <h2 className={styles.name}>{place.name}</h2>
-      </div>
+      <Row>
+        <Col className={styles.imagebox}>
+          <img src={place.image} alt="placeinfo" width="100%" />
+          <h2 className={styles.name}>{place.name}</h2>
+        </Col>
+      </Row>
     </>
   );
 }
