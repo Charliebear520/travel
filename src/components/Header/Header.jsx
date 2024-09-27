@@ -1,9 +1,7 @@
 import styles from "./header.module.css";
 import Logo from "../../assets/travel.png";
-import PlaceBar from "../PlaceBar/PlaceBar";
-import ScheduleBar from "../ScheduleBar/ScheduleBar";
-import FavoriteBar from "../FavoriteBar/FavoriteBar";
 import { Divider } from "antd";
+import NavBar from "../NavBar";
 
 export default function Header() {
   return (
@@ -15,9 +13,7 @@ export default function Header() {
           <Divider style={{ borderColor: "#ffffff" }} />
         </div>
         <div>
-          <PlaceBar />
-          <FavoriteBar />
-          <ScheduleBar />
+          <NavBar/>
         </div>
       </div>
     </>

@@ -1,33 +1,45 @@
-import { NavLink } from 'react-router-dom';
-import styles from './navbar.module.css';
+import { NavLink } from "react-router-dom";
+import styles from "./navbar.module.css";
+import { EnvironmentFilled } from "@ant-design/icons";
+import { HeartFilled } from "@ant-design/icons";
+import { ScheduleFilled } from "@ant-design/icons";
 
 export default function NavBar() {
-    return (
-        <div className={styles.navBar}>
-            <NavLink to="/products/category/tableware"
-                className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
-                Tableware
-            </NavLink>
-            <NavLink to="/products/category/cookware"
-                className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
-                Cookware
-            </NavLink>
-            <NavLink to="/products/category/home-accessories"
-                className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
-                Home accessories
-            </NavLink>
-            <NavLink to="/products/category/lighting"
-                className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
-                Lighting
-            </NavLink>
-            <NavLink to="/products/category/textile"
-                className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
-                Textile
-            </NavLink>
-            <NavLink to="/products/category/furniture"
-                className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
-                Furniture
-            </NavLink>   
+  return (
+    <div>
+      <NavLink
+        to="/"
+        className={({ isActive }) =>
+          isActive ? styles.navboxActive : styles.navbox
+        }
+      >
+        <div className={styles.navItem}>
+          <EnvironmentFilled style={{ fontSize: "24px", color: "bisque" }} />
+          <h1 className={styles.title}>Site</h1>
         </div>
-    );
+      </NavLink>
+      <NavLink
+        to="/favorite"
+        className={({ isActive }) =>
+          isActive ? styles.navboxActive : styles.navbox
+        }
+      >
+        <div className={styles.navItem}>
+          <HeartFilled style={{ fontSize: "24px", color: "bisque" }} />
+          <h1 className={styles.title}>Favorite</h1>
+        </div>
+      </NavLink>
+      <NavLink
+        to="/schedule"
+        className={({ isActive }) =>
+          isActive ? styles.navboxActive : styles.navbox
+        }
+      >
+        <div className={styles.navItem}>
+          <ScheduleFilled style={{ fontSize: "24px", color: "bisque" }} />
+          <h1 className={styles.title}>Schedule</h1>
+        </div>
+      </NavLink>
+    </div>
+  );
 }

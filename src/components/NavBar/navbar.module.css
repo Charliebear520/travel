@@ -1,0 +1,32 @@
+.navbox {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin: 0.5rem 1rem;
+  }
+  
+  /* 只對未處於 active 狀態的 navbox 應用 hover 樣式 */
+  .navbox:not(.navboxActive):hover {
+    background: rgba(188, 196, 249, 0.17);
+    border-radius: 8px;
+  }
+  
+  .title {
+    font-size: larger;
+    color: aliceblue;
+  }
+  
+  /* active 狀態的 navbox 樣式 */
+  .navboxActive {
+    composes: navbox;
+    background: rgba(172, 182, 244, 0.411);
+    border-radius: 8px;
+  }
+  
+  .navItem {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin: 0.5rem 1rem;
+  }
+  
