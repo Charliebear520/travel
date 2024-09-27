@@ -1,0 +1,49 @@
+.containerbox {
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+  }
+  
+  .container {
+    width: 100%;
+    display: flex;
+    /* gap: 1rem; */
+  }
+  
+  .title {
+    font-size: 24px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 700;
+    margin: 1rem;
+  }
+  
+  .favoritebox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    background: linear-gradient(
+      90deg,
+      rgba(217, 236, 255, 0.3315) 0%,
+      rgba(92, 64, 109, 0.39) 100%
+    );
+    border-radius: 20px;
+    width:80%;
+  }
+  
+  .placebox {
+    display: flex;
+    align-items: center;
+    gap:2rem;
+  }
+  
+  .col {
+    margin: 0 1rem;
+  }
+  
+  .name {
+    font-size: large;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 700;
+  }
+  
