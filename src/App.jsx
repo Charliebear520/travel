@@ -3,7 +3,7 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Place from "./pages/Place";
 import Favorite from "./pages/Favorite/Favorite";
-import Schedule from "./pages/Schedule";
+import Schedule from "./pages/Schedule/Schedule";
 
 function App() {
   return (
