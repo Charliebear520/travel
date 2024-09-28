@@ -1,4 +1,5 @@
 import Header from "../../components/Header/Header";
+import NearList from "../../components/NearList/NearList";
 import PlaceList from "../../components/PlaceList/PlaceList";
 import styles from "./home.module.css";
 import { Row, Col } from "antd";
@@ -23,6 +24,7 @@ export default function Home() {
             className={styles.col_16}
           >
             <PlaceList />
+            <NearList/>
           </Col>
         </Row>
       </div>

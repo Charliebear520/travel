@@ -1,0 +1,18 @@
+.containerbox {
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  /* gap: 1rem; */
+}
+
+.title {
+  font-size: 24px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+  margin:1rem;
+}

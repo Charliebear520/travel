@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Osaka",
+    "image": "/osaka.jpg",
+    "nation": "Japan",
+    "id": "1"
+  },
+  {
+    "name": "Kyoto",
+    "image": "/kyoto.jpeg",
+    "nation": "Japan",
+    "id": "2"
+  },
+  {
+    "name": "Tokyo",
+    "image": "/tokyo.jpg",
+    "nation": "Japan",
+    "id": "3"
+  },
+  {
+    "name": "Okinawa",
+    "image": "/okinawa.jpg",
+    "nation": "Japan",
+    "id": "4"
+  }
+]
