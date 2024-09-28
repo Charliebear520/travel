@@ -1,5 +1,5 @@
 import styles from "./favorite.module.css";
-import Logo from "../../assets/travel.png";
+import Logo from "/travel.png";
 import {
   DeleteFilled,
   DeleteOutlined,

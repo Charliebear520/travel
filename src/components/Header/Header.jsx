@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./header.module.css";
-import Logo from "../../assets/travel.png";
+import Logo from "/travel.png";
 import { Divider } from "antd";
 import NavBar from "../NavBar";
 

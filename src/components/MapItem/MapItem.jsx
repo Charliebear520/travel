@@ -1,9 +1,9 @@
 import styles from "./map.module.css"
 
-export default function MapItem(){
-    return(
+export default function MapItem() {
+    return (
         <>
-        <h1>This is Map page</h1>
+            <h1>This is Map page</h1>
         </>
     )
 }

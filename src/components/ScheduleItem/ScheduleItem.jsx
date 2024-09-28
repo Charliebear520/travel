@@ -1,5 +1,5 @@
 import styles from "./schedule.module.css";
-import Logo from "../../assets/travel.png";
+import Logo from "/travel.png";
 import { DeleteTwoTone } from "@ant-design/icons";
 import { Button } from "antd";
 import { getTwoToneColor, setTwoToneColor } from "@ant-design/icons";
