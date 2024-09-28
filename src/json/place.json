@@ -3,24 +3,28 @@
     "name": "Osaka",
     "image": "/japan.jpg",
     "nation": "Japan",
-    "id": "1"
+    "id": "1",
+    "description": "Osaka is Japan’s third-largest city, known for its vibrant nightlife, street food, and historical landmarks. Famous attractions include Osaka Castle and the bustling Dotonbori district. The city is a major economic hub and is also home to Universal Studios Japan, drawing both tourists and locals alike."
   },
   {
     "name": "Rome",
     "image": "/italy.jpg",
     "nation": "Italy",
-    "id": "2"
+    "id": "2",
+    "description": "Rome, the capital of Italy, is a city rich in history and culture, known for its ancient ruins like the Colosseum and Roman Forum. As the heart of the Roman Empire and the Catholic Church, it features iconic landmarks such as the Vatican, St. Peter’s Basilica, and the Sistine Chapel."
   },
   {
     "name": "Big ben",
     "image": "/uk.jpg",
     "nation": "UK",
-    "id": "3"
+    "id": "3",
+    "description": "Big Ben is the nickname for the Great Bell of the clock at the north end of the Palace of Westminster in London. Often extended to refer to the clock and clock tower, it's an iconic symbol of the UK. Renamed the Elizabeth Tower in 2012, it remains a key landmark of British heritage."
   },
   {
     "name": "Tour Eiffel",
     "image": "/france.jpg",
     "nation": "France",
-    "id": "4"
+    "id": "4",
+    "description": "The Eiffel Tower, located in Paris, France, is an iconic iron structure designed by Gustave Eiffel for the 1889 World’s Fair. Standing at 324 meters, it’s one of the most recognizable landmarks in the world and a symbol of Paris. It offers stunning views of the city and attracts millions of visitors each year."
   }
 ]

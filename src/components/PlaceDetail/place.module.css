@@ -1,2 +1,34 @@
+.titlebox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.col_16 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 
+.colbox{
+    display:flex;
+    gap:10px;
+}
+
+.description {
+  font-family: 'Times New Roman', Times, serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 36px;
+  color: #ffffff;
+}
+
+.name {
+  font-family: 'Times New Roman', Times, serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  color: #ffffff;
+}

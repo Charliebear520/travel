@@ -1,0 +1,32 @@
+.floatButton {
+    position: fixed;
+    top: 8%;
+    right: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px; /* 按鈕高度 */
+    width: 120px; /* 按鈕寬度 */
+    background: linear-gradient(180deg, #0098DA 0%, #604FCE 50%, #CE1AA7 100%); /* 背景漸層 */
+    border-radius: 20px;
+    color: white; /* 文字顏色 */
+    font-weight: bold;
+    cursor: pointer; /* 滑鼠變為手指 */
+    transition: all 0.3s ease; /* 過渡效果 */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 初始陰影 */
+    z-index: 1000; /* 保持浮動按鈕在最上層 */
+  }
+  
+  .floatButton:hover {
+    /* hover 時效果 */
+    background: linear-gradient(180deg, #0078A8 0%, #503EBE 50%, #B01692 100%); /* 漸層顏色加深 */
+    transform: scale(1.05); /* 稍微放大 */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* 陰影加深 */
+  }
+  
+  .floatButton:active {
+    /* 點擊時效果 */
+    transform: scale(0.98); /* 縮小效果 */
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2); /* 陰影變淺 */
+  }
+  

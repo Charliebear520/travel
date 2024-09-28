@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    gap: 10em;
+    width: 100%;
+    height: 100vh; /* 確保 home 填滿視窗 */
+  }
+  
+.row{
+    flex-direction: row;
+}
+  
+  .col_16 {
+    padding: 10rem 6rem 6rem 0;
+  }
+  
