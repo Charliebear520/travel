@@ -1,32 +1,84 @@
-.navbox {
-    display: flex;
-    justify-content: flex-start;
-    gap: 1rem;
-    margin: 0.5rem 1rem;
-  }
+.navContainer {
+  display: flex;
+  flex-direction: column; /* 垂直排列 */
+  align-items: center;
+  width: 60px; /* 預設寬度較小，只有 icon 大小 */
+  overflow: hidden; /* 隱藏多餘的內容 */
+  transition: width 0.3s ease; /* 寬度過渡效果 */
+}
+
+/* 展開狀態 */
+.navContainer:hover {
+  width: 200px; /* 展開後的寬度 */
+}
+
+/* 確保 navbox 和 navboxActive 的 display 和 alignment 樣式一致 */
+.navbox,
+.navboxActive {
+  display: flex;
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 展開時左對齊 */
+  width: 60%;
+  padding: 0.5rem 1rem; /* 一致的 padding */
+  border-radius: 8px;
+  transition: background-color 0.3s ease, width 0.3s ease; /* 背景和寬度過渡效果 */
+  margin: 0.5rem 0;
+}
+
+/* hover 狀態背景色 */
+.navbox:hover {
+  background-color: rgba(188, 196, 249, 0.5);
+ 
+}
+
+/* active 狀態背景色 */
+.navboxActive {
+  background-color: rgba(172, 182, 244, 0.411);
   
-  /* 只對未處於 active 狀態的 navbox 應用 hover 樣式 */
-  .navbox:not(.navboxActive):hover {
-    background: rgba(188, 196, 249, 0.17);
-    border-radius: 8px;
-  }
-  
-  .title {
-    font-size: larger;
-    color: aliceblue;
-  }
-  
-  /* active 狀態的 navbox 樣式 */
-  .navboxActive {
-    composes: navbox;
-    background: rgba(172, 182, 244, 0.411);
-    border-radius: 8px;
-  }
-  
-  .navItem {
-    display: flex;
-    justify-content: flex-start;
-    gap: 1rem;
-    margin: 0.5rem 1rem;
-  }
-  
+}
+
+/* navItem 展開狀態下，水平排列 */
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* icon 和 title 之間的間距 */
+  transition: flex-direction 0.3s ease; /* 排版過渡效果 */
+}
+
+/* 收合狀態下，icon 水平置中 */
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* 確保寬度填滿 */
+}
+
+/* 展開狀態下的 icon 左對齊 */
+.navContainer:hover .icon {
+  justify-content: flex-start; /* 展開時 icon 左對齊 */
+}
+
+/* title 樣式 */
+.title {
+  font-size: larger;
+  color: aliceblue;
+  white-space: nowrap;
+}
+
+/* 隱藏的 title */
+.navbox .title,
+.navboxActive .title {
+  display: none;
+}
+
+/* 展開狀態下顯示 title */
+.navContainer:hover .navbox .title,
+.navContainer:hover .navboxActive .title {
+  display: inline-block; /* 展開時顯示 title */
+}
+
+/* NavContainer 展開時，navbox 的變化 */
+.navContainer:hover .navbox,
+.navContainer:hover .navboxActive {
+  justify-content: flex-start; /* 展開時左對齊 */
+}

@@ -10,16 +10,16 @@ export default function Home() {
         <Row>
           <Col
             sm={{ span: 24 }}
-            md={{ span: 24 }}
-            lg={{ span: 4 }}
+            md={{ span: 6 }} /* 調整這裡的寬度 */
+            lg={{ span: 4 }} /* 這裡維持不變 */
             className={styles.col_4}
           >
             <Header />
           </Col>
           <Col
             sm={{ span: 24 }}
-            md={{ span: 24 }}
-            lg={{ span: 16 }}
+            md={{ span: 18 }} /* 對應調整這裡的寬度 */
+            lg={{ span: 20 }} /* 擴展內容區域 */
             className={styles.col_16}
           >
             <PlaceList />

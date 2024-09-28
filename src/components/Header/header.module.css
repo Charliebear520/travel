@@ -1,23 +1,58 @@
-.container{
-    display:flex;
-    flex-direction: column;
-    margin:5rem 1rem;
-}
-
-.title{
-    font-size: 24px;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 700;
-}
-
-.divider{
-    color:white;
-}
-
-.logobox{
+.headerContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-
+    height: 100vh; /* 垂直填滿 */
+    padding: 4rem 0;
+    background-color: #3b4252; /* 背景色區分 */
+    transition: all 0.3s ease; /* 過渡效果 */
+    width: 60px; /* 初始寬度與 NavBar 一致 */
+  }
+  
+  .expand {
+    width: 200px; /* 展開時寬度與 NavBar 一致 */
+  }
+  
+  .shrink {
+    width: 100px; /* 收合時寬度 */
+  }
+  
+  .logoBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* 確保垂直置中 */
+    margin-bottom: 1rem; /* 調整 logo 和 NavBar 之間的間距 */
+    transition: all 0.3s ease;
+  }
+  
+  .logo {
+    width: 40px; /* 收合時 logo 大小 */
+    transition: width 0.3s ease;
+  }
+  
+  .title {
+    font-size: 16px; /* 收合時 title 大小 */
+    transition: font-size 0.3s ease;
+    /* 在縮合狀態下移除標題的樣式 */
+  }
+  
+  .expand .logo {
+    width: 80px; /* 展開時 logo 大小 */
+  }
+  
+  .expand .title {
+    font-size: 24px; /* 展開時 title 大小 */
+  }
+  
+  .divider {
+    border-color: #ffffff;
+    /* 在縮合狀態下移除 divider 的樣式 */
+    opacity: 0; /* 收合時隱藏 divider */
+    transition: opacity 0.3s ease;
+  }
+  
+  .expand .divider {
+    opacity: 1; /* 展開時顯示 divider */
+  }
+  
