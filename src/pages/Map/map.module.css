@@ -10,6 +10,11 @@
 }
   
   .col_16 {
-    padding: 10rem 6rem 6rem 6rem;
+    padding: 2.3rem;
   }
   
+@media (max-width:990px){
+  .col_16 {
+    padding-left: 5rem;
+  }
+}

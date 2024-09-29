@@ -4,27 +4,60 @@
     "image": "/japan.jpg",
     "nation": "Japan",
     "id": "1",
-    "description": "Osaka is Japan’s third-largest city, known for its vibrant nightlife, street food, and historical landmarks. Famous attractions include Osaka Castle and the bustling Dotonbori district. The city is a major economic hub and is also home to Universal Studios Japan, drawing both tourists and locals alike."
+    "description": "Osaka is Japan’s third-largest city, known for its vibrant nightlife, street food, and historical landmarks. Famous attractions include Osaka Castle and the bustling Dotonbori district. The city is a major economic hub and is also home to Universal Studios Japan, drawing both tourists and locals alike.",
+    "position":[
+      34.6891732141432, 
+      135.52517614090416
+    ]
   },
   {
-    "name": "Rome",
-    "image": "/italy.jpg",
-    "nation": "Italy",
+    "name": "Asakusa",
+    "image": "/Asakusa.jpg",
+    "nation": "Japan",
     "id": "2",
-    "description": "Rome, the capital of Italy, is a city rich in history and culture, known for its ancient ruins like the Colosseum and Roman Forum. As the heart of the Roman Empire and the Catholic Church, it features iconic landmarks such as the Vatican, St. Peter’s Basilica, and the Sistine Chapel."
+    "description": "Rome, the capital of Italy, is a city rich in history and culture, known for its ancient ruins like the Colosseum and Roman Forum. As the heart of the Roman Empire and the Catholic Church, it features iconic landmarks such as the Vatican, St. Peter’s Basilica, and the Sistine Chapel.",
+    "position":[
+      35.7112643678724, 139.7963655961073
+    ]
   },
   {
-    "name": "Big ben",
-    "image": "/uk.jpg",
-    "nation": "UK",
+    "name": "Kyoto",
+    "image": "/kyoto.jpeg",
+    "nation": "Japan",
     "id": "3",
-    "description": "Big Ben is the nickname for the Great Bell of the clock at the north end of the Palace of Westminster in London. Often extended to refer to the clock and clock tower, it's an iconic symbol of the UK. Renamed the Elizabeth Tower in 2012, it remains a key landmark of British heritage."
+    "description": "Big Ben is the nickname for the Great Bell of the clock at the north end of the Palace of Westminster in London. Often extended to refer to the clock and clock tower, it's an iconic symbol of the UK. Renamed the Elizabeth Tower in 2012, it remains a key landmark of British heritage.",
+    "position":[
+      35.02471593449605, 135.73824150772262
+    ]
   },
   {
-    "name": "Tour Eiffel",
-    "image": "/france.jpg",
-    "nation": "France",
+    "name": "Tokyo",
+    "image": "/tokyo.jpg",
+    "nation": "Japan",
     "id": "4",
-    "description": "The Eiffel Tower, located in Paris, France, is an iconic iron structure designed by Gustave Eiffel for the 1889 World’s Fair. Standing at 324 meters, it’s one of the most recognizable landmarks in the world and a symbol of Paris. It offers stunning views of the city and attracts millions of visitors each year."
+    "description": "The Eiffel Tower, located in Paris, France, is an iconic iron structure designed by Gustave Eiffel for the 1889 World’s Fair. Standing at 324 meters, it’s one of the most recognizable landmarks in the world and a symbol of Paris. It offers stunning views of the city and attracts millions of visitors each year.",
+    "position":[
+      35.65872866544364, 139.745475811446
+    ]
+  },
+  {
+    "name": "Mount Fuji",
+    "image": "/fuji.jpg",
+    "nation": "Japan",
+    "id": "5",
+    "description": "The Eiffel Tower, located in Paris, France, is an iconic iron structure designed by Gustave Eiffel for the 1889 World’s Fair. Standing at 324 meters, it’s one of the most recognizable landmarks in the world and a symbol of Paris. It offers stunning views of the city and attracts millions of visitors each year.",
+    "position":[
+      35.36128953308322, 138.7273633396546
+    ]
+  },
+  {
+    "name": "Okinawa",
+    "image": "/okinawa.jpg",
+    "nation": "Japan",
+    "id": "6",
+    "description": "The Eiffel Tower, located in Paris, France, is an iconic iron structure designed by Gustave Eiffel for the 1889 World’s Fair. Standing at 324 meters, it’s one of the most recognizable landmarks in the world and a symbol of Paris. It offers stunning views of the city and attracts millions of visitors each year.",
+    "position":[
+      26.705016566048386, 128.0189866240207
+    ]
   }
 ]

@@ -4,6 +4,7 @@
   align-items: center;
   width: 60px; /* 預設寬度較小，只有 icon 大小 */
   overflow: hidden; /* 隱藏多餘的內容 */
+  height: auto ;
   transition: width 0.3s ease; /* 寬度過渡效果 */
 }
 
