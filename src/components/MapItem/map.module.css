@@ -30,6 +30,30 @@
   padding: 0; /* 確保沒有額外的填充 */
 }
 
+.popup{
+  display: flex;
+  flex-direction: column; /* 改為垂直排列 */
+}
+.landmarkName{
+  display: flex;
+  font-size: 16px;
+  justify-content: center;
+}
+.img{
+  width: 150px;
+}
+
+.buttonContainer{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+.buttonHeart{
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
 
 @media (max-width: 995px) {
   .mapContainer {
