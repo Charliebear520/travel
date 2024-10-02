@@ -5,20 +5,29 @@ import { Row, Col, Button, AutoComplete, Input } from 'antd';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';  // 引入 Leaflet 的樣式
 import { HeartFilled, HeartOutlined, } from "@ant-design/icons";
-import landmarks from "../../json/place.json"
+import landmarks from "../../json/place.json";
+import { useDispatch } from 'react-redux';
+import { addFavorite } from "../redux/favoriteSlice";
+import AddToFavorite from "../AddToFavorite";
 
 
 export default function MapItem() {
     const [click, setClick] = useState(false);
+    const dispatch = useDispatch(); // 使用 useDispatch 來調用 Redux action
     const center = [36.23541690015412, 137.97220383903155];
     const markerIcon = new L.Icon({
         iconUrl: "/public/pin.png",
         iconSize: [35, 35],
     });
 
-    const ButtonClick = () => {
-        setClick(!click);
-    };
+    // const ButtonClick = (landmark) => {
+    //     setClick(!click);
+    //     dispatch(addFavorite({
+    //         id: landmark.id,
+    //         name: landmark.name,
+    //         image: landmark.image,
+    //     }));
+    // };
 
     const [options, setOptions] = useState([]);  // 搜尋選項
     const navigate = useNavigate();
@@ -91,14 +100,7 @@ export default function MapItem() {
                                         className={styles.img}
                                     />
                                     <div className={styles.buttonContainer}>
-                                        <div className={styles.buttonHeart}
-                                            onClick={(e) => {
-                                                e.stopPropagation(); // 阻止點擊事件冒泡
-                                                ButtonClick();
-                                            }}>
-                                            {click === false ? <HeartOutlined /> : <HeartFilled />}
-
-                                        </div>
+                                        <AddToFavorite landmark={landmark} />
                                         <Button type="primary">加入行程</Button>
                                     </div>
 

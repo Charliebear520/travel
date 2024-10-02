@@ -7,6 +7,7 @@
   /* 確保沒有額外的邊距 */
   padding: 0;
   /* 確保沒有額外的填充 */
+  overflow-x: hidden;
 }
 
 .mapContainer {
