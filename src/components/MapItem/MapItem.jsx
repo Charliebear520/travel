@@ -1,11 +1,12 @@
 import styles from "./map.module.css"
 import { useState } from "react";
-import { Row, Col } from 'antd';
+import { useNavigate } from "react-router-dom";
+import { Row, Col, Button, AutoComplete, Input } from 'antd';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';  // 引入 Leaflet 的樣式
-import landmarks from "../../json/place.json"
 import { HeartFilled, HeartOutlined, } from "@ant-design/icons";
-import { Button } from "antd";
+import landmarks from "../../json/place.json"
+
 
 export default function MapItem() {
     const [click, setClick] = useState(false);
@@ -19,9 +20,53 @@ export default function MapItem() {
         setClick(!click);
     };
 
+    const [options, setOptions] = useState([]);  // 搜尋選項
+    const navigate = useNavigate();
+    // 當使用者輸入時動態提供搜尋建議
+    const handleSearch = (value) => {
+        const searchResults = landmarks
+            .filter(landmark => landmark.name.toLowerCase().includes(value.toLowerCase()))
+            .map(landmark => ({
+                value: landmark.name,
+                id: landmark.id,  // 加入 ID 以便搜尋後導覽
+            }));
+
+        setOptions(searchResults);
+    };
+
+    // 搜尋後導覽到對應景點
+    const onSelect = (value, option) => {
+        navigate(`/places/id/${option.id}`);
+    };
+
+    // 處理按下 Enter 鍵後的行為
+    const onSearch = (value) => {
+        const selectedPlace = landmarks.find(landmark => landmark.name.toLowerCase() === value.toLowerCase());
+        if (selectedPlace) {
+            navigate(`/places/id/${selectedPlace.id}`);
+        }
+    };
+
     return (
 
         <div className={styles.fullScreen}>
+            {/* 搜尋欄 */}
+            <Row justify="center" className={styles.searchRow}>
+                <Col span={18}>
+                    <AutoComplete
+                        options={options}
+                        onSearch={handleSearch}
+                        onSelect={onSelect}
+                        style={{ width: '65%' }}
+                    >
+                        <Input.Search
+                            placeholder="搜尋景點"
+                            enterButton
+                            onSearch={onSearch}  // 處理 Enter 鍵觸發導航
+                        />
+                    </AutoComplete>
+                </Col>
+            </Row>
             <Row className={styles.mapContainer}>
                 <Col span={24} className={styles.mapCol}>
                     <MapContainer center={center} zoom={7} className={styles.map}>
