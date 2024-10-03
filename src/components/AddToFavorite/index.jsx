@@ -28,21 +28,6 @@ export default function AddToFavorite({ landmark }) {
         }
     };
 
-    const addToFavorite = () => {
-        dispatch(
-            addFavorite({
-                id: landmark.id,
-                name: landmark.name,
-                image: landmark.image,
-            })
-        );
-        console.log("Action dispatched");
-    };
-
-    const removeFromFavorite = () => {
-        dispatch(removeFavorite(landmark.id));
-    };
-
     return (
         <div className={styles.buttonHeart} onClick={handleClick}>
             {isFavorite ? <HeartFilled /> : <HeartOutlined />}

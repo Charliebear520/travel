@@ -6,14 +6,11 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';  // 引入 Leaflet 的樣式
 import { HeartFilled, HeartOutlined, } from "@ant-design/icons";
 import landmarks from "../../json/place.json";
-import { useDispatch } from 'react-redux';
-import { addFavorite } from "../redux/favoriteSlice";
 import AddToFavorite from "../AddToFavorite";
+import CreateSchedule from "../CreateSchedule";
 
 
 export default function MapItem() {
-    const [click, setClick] = useState(false);
-    const dispatch = useDispatch(); // 使用 useDispatch 來調用 Redux action
     const center = [36.23541690015412, 137.97220383903155];
     const markerIcon = new L.Icon({
         iconUrl: "/public/pin.png",
@@ -110,6 +107,7 @@ export default function MapItem() {
                     </MapContainer>
                 </Col>
             </Row>
+            <CreateSchedule />
         </div>
     );
 }
