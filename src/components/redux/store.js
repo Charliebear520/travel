@@ -1,6 +1,4 @@
-"use client"
-// import storage from 'redux-persist/lib/storage';
-// import { persistReducer, persistStore } from 'redux-persist';
+
 import { thunk } from 'redux-thunk';
 // import storage from 'redux-persist/lib/storage';
 // import { persistReducer,persistStore } from 'redux-persist';
@@ -11,6 +9,7 @@ import { configureStore } from '@reduxjs/toolkit';
 
 import { combineReducers } from 'redux';
 import favoritesReducer from './favoriteSlice';
+import scheduleReducer from './scheduleSlice';
 
 // Data Persist Config
 // const persistConfig = {
@@ -32,6 +31,7 @@ import favoritesReducer from './favoriteSlice';
 
 const rootReducer = combineReducers({
     favorites: favoritesReducer,
+    schedule: scheduleReducer,
     // 其他 reducers
   });
 

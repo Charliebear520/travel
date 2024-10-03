@@ -12,16 +12,6 @@ export default function CreateSchedule() {
   return (
     <>
       <ConfigProvider
-        theme={{
-          components: {
-            Button: {
-              defaultActiveBg: "lightgreen",
-              defaultBorderColor:"lightblue",
-              defaultHoverBorderColor:"white",
-              defaultActiveBorderColor:"white"
-            },
-          },
-        }}
       >
         <div>
           <nav onClick={toggleOpen}>

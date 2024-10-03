@@ -1,19 +1,35 @@
 import React, { useState } from 'react';
-import { Modal, Button, Form, Input, DatePicker } from 'antd';
+import { Modal, Button, Form, Input, DatePicker, notification } from 'antd';
+import { useDispatch, useSelector } from "react-redux";
+import { addScheduleItems } from '../redux/scheduleSlice';
 
 export default function ScheduleModal({ isOpen, toggleModal }) {
     // const [isModalVisible, setIsModalVisible] = useState(false);
     const { RangePicker } = DatePicker;
-    const [time, setTime] = useState('');
     const [form] = Form.useForm();
 
+    const [time, setTime] = useState('');
     const timeChange = (date, dateString) => {
         setTime(dateString);
     };
 
+    const [scheduleName, setScheduleName] = useState('');
+    const nameChange = (name) => {
+        setScheduleName(name);
+    }
+
     const handleOk = () => {
         form.validateFields().then(values => {
-            console.log('Form values:', values);
+            dispatch(addScheduleItems({
+                scheduleName: values['schedule name:'],
+                time: time,
+            }));
+            console.log('Action dispatched');
+            notification.success({
+                message: '已新增行程!',
+                description: `已添加 ${values['schedule name:']} 到行程中`,
+                placement: 'top'
+            });
             toggleModal();
             form.resetFields();
         }).catch(info => {
@@ -25,6 +41,9 @@ export default function ScheduleModal({ isOpen, toggleModal }) {
         toggleModal();
         form.resetFields();
     };
+
+    const dispatch = useDispatch();
+
 
     return (
         <div>
@@ -47,10 +66,12 @@ export default function ScheduleModal({ isOpen, toggleModal }) {
                         label="行程名稱"
                         rules={[{ required: true, message: '請輸入行程名稱' }]}
                     >
-                        <Input />
+                        <Input onChange={(e) => nameChange(e.target.value)} />
                     </Form.Item>
                 </Form>
             </Modal>
         </div>
+
     );
 };
+
