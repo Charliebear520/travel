@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Modal, Button, Form, Input, DatePicker, notification } from 'antd';
 import { useDispatch, useSelector } from "react-redux";
 import { addScheduleItems } from '../redux/scheduleSlice';
+import { addSchedule } from '../redux/addToSchedule';
+import { v4 as uuidv4 } from 'uuid';
 
 export default function ScheduleModal({ isOpen, toggleModal }) {
     // const [isModalVisible, setIsModalVisible] = useState(false);
@@ -17,11 +19,20 @@ export default function ScheduleModal({ isOpen, toggleModal }) {
     const nameChange = (name) => {
         setScheduleName(name);
     }
+    const landmarks = [];
 
     const handleOk = () => {
         form.validateFields().then(values => {
+
+            dispatch(addSchedule({
+                scheduleId: uuidv4(),
+                scheduleName: scheduleName,
+                time: time,
+                landmarks
+            }));
+
             dispatch(addScheduleItems({
-                scheduleName: values['schedule name:'],
+                scheduleName: scheduleName,
                 time: time,
             }));
             console.log('Action dispatched');
@@ -74,4 +85,3 @@ export default function ScheduleModal({ isOpen, toggleModal }) {
 
     );
 };
-

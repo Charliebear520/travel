@@ -75,6 +75,7 @@
 // // export reducer to global
 // export default favSlice.reducer;
 
+
 import { createSlice } from '@reduxjs/toolkit';
 
 const favoriteSlice = createSlice({
@@ -92,6 +93,6 @@ const favoriteSlice = createSlice({
         },
     },
 });
-
+export const selectFavItems = (state) => state.favorites.schedules;
 export const { addFavorite, removeFavorite } = favoriteSlice.actions;
 export default favoriteSlice.reducer;

@@ -10,6 +10,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import { combineReducers } from 'redux';
 import favoritesReducer from './favoriteSlice';
 import scheduleReducer from './scheduleSlice';
+import addToScheduleReducer from './addToSchedule';
 
 // Data Persist Config
 // const persistConfig = {
@@ -32,6 +33,7 @@ import scheduleReducer from './scheduleSlice';
 const rootReducer = combineReducers({
     favorites: favoritesReducer,
     schedule: scheduleReducer,
+    addToSchedule: addToScheduleReducer,
     // 其他 reducers
   });
 

@@ -8,6 +8,7 @@ import { HeartFilled, HeartOutlined, } from "@ant-design/icons";
 import landmarks from "../../json/place.json";
 import AddToFavorite from "../AddToFavorite";
 import CreateSchedule from "../CreateSchedule";
+import AddToSchedule from "../AddToSchedule";
 
 
 export default function MapItem() {
@@ -98,7 +99,8 @@ export default function MapItem() {
                                     />
                                     <div className={styles.buttonContainer}>
                                         <AddToFavorite landmark={landmark} />
-                                        <Button type="primary">加入行程</Button>
+                                        <AddToSchedule landmark={landmark}/>
+                                        {/* <Button type="primary">加入行程</Button> */}
                                     </div>
 
                                 </Popup>
