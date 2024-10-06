@@ -5,7 +5,7 @@ import Place from "./pages/Place/Place";
 import Favorite from "./pages/Favorite/Favorite";
 import Schedule from "./pages/Schedule/Schedule";
 import ScheduleDetailPage from "./pages/ScheduleDetailPage";
-import Map from "./pages/Map/map";
+import Map from "./pages/Map/Map";
 import NavigationButton from "./components/NavigationButton/NavigationButton";
 import { Provider } from 'react-redux';
 import { ConfigProvider } from "antd";
