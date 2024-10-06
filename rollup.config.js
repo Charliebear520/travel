@@ -2,13 +2,13 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import babel from '@rollup/plugin-babel';
 import postcss from 'rollup-plugin-postcss'; // 引入 postcss 插件
-
+import json from '@rollup/plugin-json';
+import { terser } from 'rollup-plugin-terser'; // 引入 terser 插件
 export default {
   input: 'src/App.jsx', // 確保入口文件路徑正確
   output: {
-    file: 'dist/bundle.js',
-    format: 'esm',
-    sourcemap: true, // 可選：啟用源地圖以便於調試
+    file: 'dist/bundle.js', // Adjust this to your desired output file
+    format: 'iife', // or any other format you need
   },
   plugins: [
     json(),
