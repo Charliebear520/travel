@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { HeartFilled, HeartOutlined } from '@ant-design/icons';
 import { addFavorite, removeFavorite } from '../redux/favoriteSlice';
-import styles from './addToFavorite.module.css';
+import styles from './addtofavorite.module.css';
 
 export default function AddToFavorite({ landmark }) {
     const [isFavorite, setIsFavorite] = useState(false);
