@@ -3,7 +3,7 @@ import { useState } from "react";
 import { CalendarFilled, PlusOutlined } from "@ant-design/icons";
 
 import ScheduleModal from "../ScheduleModal";
-import styles from "../CreateSchedule/createSchedule.module.css";
+import styles from "../CreateSchedule/createschedule.module.css";
 export default function CreateSchedule() {
   const [isOpen, setIsOpen] = useState(false);
   const toggleOpen = () => {
