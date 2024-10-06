@@ -11,6 +11,8 @@ export default {
     sourcemap: true, // 可選：啟用源地圖以便於調試
   },
   plugins: [
+    json(),
+    terser(), // Optional: for minifying the output
     resolve({
       extensions: ['.js', '.jsx', '.ts', '.tsx'], // 根據需要添加擴展名
     }),
