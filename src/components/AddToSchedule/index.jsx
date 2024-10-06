@@ -3,6 +3,7 @@ import { Button, Radio, Space, Modal, notification } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { addSchedule } from "../redux/addToSchedule";
 import { selectScheduleName } from "../redux/addToSchedule";
+import { v4 as uuidv4 } from 'uuid';
 import styles from "./addToSchedule.module.css";
 
 export default function AddToSchedule({ landmark }) {

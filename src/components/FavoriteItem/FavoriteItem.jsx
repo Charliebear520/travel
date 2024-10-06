@@ -11,24 +11,6 @@ import { getTwoToneColor, setTwoToneColor } from "@ant-design/icons";
 import { removeFavorite } from "../redux/favoriteSlice";
 import { useDispatch } from "react-redux";
 
-// setTwoToneColor("#eb2f96");
-// getTwoToneColor(); // #eb2f96
-
-// const { confirm } = Modal;
-// const showPromiseConfirm = () => {
-//   confirm({
-//     title: "Do you want to delete these items?",
-//     icon: <ExclamationCircleFilled />,
-//     content:
-//       "When clicked the OK button, this dialog will be closed after 1 second",
-//     onOk() {
-//       return new Promise((resolve, reject) => {
-//         setTimeout(Math.random() > 0.5 ? resolve : reject, 1000);
-//       }).catch(() => console.log("Oops errors!"));
-//     },
-//     onCancel() {},
-//   });
-// };
 
 export default function FavoriteItem({place}) {
   const dispatch = useDispatch();

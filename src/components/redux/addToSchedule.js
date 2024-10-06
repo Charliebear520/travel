@@ -59,9 +59,16 @@ const addToScheduleSlice = createSlice({
                 state.schedules[scheduleIndex].landmarks = filteredLandmarks;
             }
         },
+        updateLandmarkOrder: (state, action) => {
+            const { scheduleName, newLandmarks } = action.payload;
+            const scheduleIndex = state.schedules.findIndex(schedule => schedule.scheduleName === scheduleName);
+            if (scheduleIndex >= 0) {
+                state.schedules[scheduleIndex].landmarks = newLandmarks;
+            }
+        }
     },
 });
 // export state to global
 export const selectScheduleName = (state) => state.addToSchedule.schedules;
-export const { addSchedule, removeSchedule } = addToScheduleSlice.actions;
+export const { addSchedule, removeSchedule, updateLandmarkOrder } = addToScheduleSlice.actions;
 export default addToScheduleSlice.reducer;
