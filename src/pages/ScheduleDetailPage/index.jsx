@@ -1,5 +1,4 @@
 import Header from "../../components/Header/Header";
-import ScheduleList from "../../components/ScheduleList/ScheduleList";
 import ScheduleDetail from "../../components/ScheduleDetail";
 import styles from "./scheduleDetail.module.css";
 import { Row, Col } from "antd";

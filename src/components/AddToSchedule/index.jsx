@@ -7,16 +7,7 @@ import { v4 as uuidv4 } from 'uuid';
 import styles from "./addToSchedule.module.css";
 
 export default function AddToSchedule({ landmark }) {
-    useEffect(() => {
-        const storedScheduleItem = localStorage.getItem('scheduleItem');
-        if (storedScheduleItem) {
-            setSelectedSchedule(storedScheduleItem);
-        }
-    }, []);
 
-    const saveScheduleItemToLocalStorage = (landmark) => {
-        localStorage.setItem('scheduleItem', JSON.stringify(landmark));
-    };
 
     const [open, setOpen] = useState(false);
     const showModal = () => {
@@ -47,7 +38,6 @@ export default function AddToSchedule({ landmark }) {
             description: `已添加 ${landmark.name} 到${selectedSchedule}中`,
             placement: 'top'
         });
-        saveScheduleItemToLocalStorage(selectedSchedule);
     };
 
     const addToFav = () => {

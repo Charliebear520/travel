@@ -9,24 +9,28 @@ import Map from "./pages/Map/map";
 import NavigationButton from "./components/NavigationButton/NavigationButton";
 import { Provider } from 'react-redux';
 import { ConfigProvider } from "antd";
-import store from "./components/redux/store";
+import store, { persistor } from "./components/redux/store";
+import { PersistGate } from 'redux-persist/integration/react';
 
 function App() {
   return (
     <Provider store={store}>
-      <BrowserRouter>
-        <ConfigProvider>
-          <NavigationButton />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="places/id/:placeId" element={<Place />} />
-            <Route path="/favorite" element={<Favorite />} />
-            <Route path="/schedule" element={<Schedule />} />
-            <Route path="/schedule/:scheduleId" element={<ScheduleDetailPage />} />
-            <Route path="/map" element={<Map />} />
-          </Routes>
-        </ConfigProvider>
-      </BrowserRouter>
+      <PersistGate loading={null} persistor={persistor}>
+        <BrowserRouter>
+          <ConfigProvider>
+            <NavigationButton />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="places/id/:placeId" element={<Place />} />
+              <Route path="/favorite" element={<Favorite />} />
+              <Route path="/schedule" element={<Schedule />} />
+              <Route path="/schedule/:scheduleId" element={<ScheduleDetailPage />} />
+              <Route path="/map" element={<Map />} />
+            </Routes>
+          </ConfigProvider>
+        </BrowserRouter>
+      </PersistGate>
+
 
     </Provider>
 

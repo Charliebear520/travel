@@ -1,12 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-const initialState = {
-    schedules: [{
-        scheduleId: '1',
-        scheduleName: '範例行程',
-        time: '2024-10-05',
-        landmarks: [],
-    },]
-};
+const initialState = {schedules: []};
 const addToScheduleSlice = createSlice({
     name: 'addToSchedules',
     initialState,
@@ -69,6 +62,6 @@ const addToScheduleSlice = createSlice({
     },
 });
 // export state to global
-export const selectScheduleName = (state) => state.addToSchedule.schedules;
+export const selectScheduleName = (state) => state.addToSchedules.schedules;
 export const { addSchedule, removeSchedule, updateLandmarkOrder } = addToScheduleSlice.actions;
 export default addToScheduleSlice.reducer;
