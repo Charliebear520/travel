@@ -1531,6 +1531,11 @@
     magic-string "^0.30.3"
     picomatch "^2.3.1"
 
+"@rollup/plugin-html@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@rollup/plugin-html/-/plugin-html-1.0.4.tgz#ab4050935c2f4cd2e860e6bf5f0ddcaac1a539f0"
+  integrity sha512-dbxJ8JAuelwdiW7nqeRbe564XPwxX234lsBHrmgVJ+yTL9Nt5zFbZIRcgIIlcTtNNp6M9spK5M+spjcnSExj1w==
+
 "@rollup/plugin-json@^6.1.0":
   version "6.1.0"
   resolved "https://registry.npmjs.org/@rollup/plugin-json/-/plugin-json-6.1.0.tgz"
