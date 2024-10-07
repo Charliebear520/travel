@@ -14,7 +14,11 @@ import AddToSchedule from "../AddToSchedule";
 export default function MapItem() {
     const center = [36.23541690015412, 137.97220383903155];
     const markerIcon = new L.Icon({
-        iconUrl: "/public/pin.png",
+        iconUrl: "/pin.png",
+        iconSize: [35, 35],
+    });
+    const certerIcon = new L.Icon({
+        iconUrl: "/location.png",
         iconSize: [35, 35],
     });
 
@@ -81,7 +85,7 @@ export default function MapItem() {
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         />
-                        <Marker position={center} >
+                        <Marker position={center} icon={certerIcon}>
                             <Popup>
                                 地圖中心
                             </Popup>
